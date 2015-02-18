@@ -20,7 +20,7 @@ module.exports = function(source, sourceMap) {
 
         // append require()s with absoluted paths to neccessary polyfills
         polyfills.forEach(function(polyfill) {
-            inject += 'require("' + require.resolve('polyfill/source/' + polyfill) + '");';
+            inject += 'require("' + require.resolve('polyfill-service/polyfills/' + polyfill) + '");';
             inject += '\n';
         });
 
